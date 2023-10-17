@@ -6,7 +6,6 @@ import Footer from "../../Components/Footer/Footer";
 import aboutUsPicture from "../../images/balance.jpeg";
 import Slick from "../../Components/Sliders/Sliders";
 
-
 function Homepage() {
   return (
     <div>
@@ -45,7 +44,7 @@ function Homepage() {
                 centered, harmonious, and empowered you. Together, let's unlock
                 the boundless potential that resides within.
               </p>
-         
+
               <img
                 src={aboutUsPicture}
                 className="about-us-picture"
@@ -53,13 +52,19 @@ function Homepage() {
               />
             </div>
           </div>
+          <section
+            style={{
+              width: "100vw",
+              height: "100% ",
+              backgroundColor: "red",
+              position: "relative",
+            }}
+          >
+            <Slick />
+          </section>
+          <Footer />
         </div>
       </section>
-        
-      <section>
-      <Slick/>
-      </section>
-      <Footer />
     </div>
   );
 }

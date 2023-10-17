@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.homepage {
+  width: 100wh;
+  height: 100vh;
+  background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+}
+.homepage-main-picture {
+  border-radius: 50%;
+}
+
+.homepage-main {
+  display: flex;
+  justify-content: center;
+  padding-top: 150px;
+}
+
+.homepage-main-text {
+  display: flex;
+  justify-content: center;
+  font-size: 50px;
+}
+
+.about-us {
+  width: 100wh;
+  height: 100vh;
+  font-family: adobe-garamond-pro;
+  font-style: italic;
+}
+.about-us-main {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 50px;
+}
+
+.about-us-title {
+  display: flex;
+  justify-content: center;
+}
+
+.about-us-text {
+  width: 99%;
+  padding-left: 350px;
+}
+
+.about-us-picture {
+  width: 40%;
+  height: 300px;
+  padding-left: 500px;
+ 
+}

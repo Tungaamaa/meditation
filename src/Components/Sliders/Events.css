@@ -1,0 +1,30 @@
+
+.slider-content {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .slider-header {
+    font-size: 42px;
+  }
+
+  .events-slider-container {
+    max-width: 60vw;
+    position: relative;
+  }
+
+
+  .events-slider-title {
+    width: 60%;
+    font-size: 20px;
+    margin-left: 40px;
+   
+  }
+  
+  .events-sliders-img {
+    display: flex;
+    margin: 0 auto;
+    height: 15vh;
+    width: 30%;
+    border-radius: 5%;
+  }
+  

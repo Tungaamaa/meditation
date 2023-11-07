@@ -1,4 +1,6 @@
 import React from "react";
+
+//INTERNAL IMPORT
 import "./Home-page.css";
 import Header from "../../Components/Header/Header";
 import homepageMainPicture from "../../images/meditation.avif";
@@ -6,8 +8,9 @@ import Footer from "../../Components/Footer/Footer";
 import aboutUsPicture from "../../images/balance.jpeg";
 import Slick from "../../Components/Sliders/Sliders";
 
+function Homepage(props) {
+  
 
-function Homepage() {
   return (
     <div>
       <section className="homepage">
@@ -45,7 +48,7 @@ function Homepage() {
                 centered, harmonious, and empowered you. Together, let's unlock
                 the boundless potential that resides within.
               </p>
-         
+
               <img
                 src={aboutUsPicture}
                 className="about-us-picture"
@@ -53,13 +56,13 @@ function Homepage() {
               />
             </div>
           </div>
+
+          <section className="homepage-sliders">
+            <Slick />
+          </section>
+          <Footer />
         </div>
       </section>
-        
-      <section>
-      <Slick/>
-      </section>
-      <Footer />
     </div>
   );
 }

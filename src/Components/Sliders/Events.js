@@ -1,16 +1,15 @@
 import React from "react";
 import Slider from "react-slick";
+import EventsData from "./EventsData";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
 //INTERNAL IMPORT
-import "./Sliders.css";
-import Images from "./Images";
+import "./Events.css";
 
-const Slick = () => {
+const Events = () => {
   const settings = {
     dots: true,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
@@ -21,14 +20,13 @@ const Slick = () => {
   return (
     <>
       <div className="slider-content">
-        <h1 className="slider-header">Gallery</h1>
-        <div className="slider-container">
+        <h1 className="slider-header">Upcoming Events</h1>
+        <div className="events-slider-container">
           <Slider {...settings}>
-            {Images.map((item) => (
+            {EventsData.map((item) => (
               <div key={item.id}>
-                <img src={item.src} alt={item.alt} className="slider-img"/>
-                <h2 className="slider-title">{item.title}</h2>
-                <p className="slider-description">{item.description}</p>
+                <img src={item.src} alt={item.alt} className="events-sliders-img" />
+                <h2 className="events-slider-title">{item.title}</h2>
               </div>
             ))}
           </Slider>
@@ -38,4 +36,4 @@ const Slick = () => {
   );
 };
 
-export default Slick;
+export default Events;

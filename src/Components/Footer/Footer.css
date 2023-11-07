@@ -1,5 +1,5 @@
 .footer-top {
-  width: 100%;
+  width: 100vw;
   height: 112px;
   background-color: #021b22;
   display: flex;
@@ -28,16 +28,23 @@
 }
 
 .footer {
-  width: 100%;
+  width: 100vw;
   height: 336px;
   display: flex;
   justify-content: center;
+  align-items: center;
   background-color: #022b36;
-  padding-left: 140px;
 
 }
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
 .footer-text {
-  color: rgba(255,255,255,.4);
+  color: rgba(255, 255, 255, 0.4);
   font-family: adobe-garamond-pro;
   font-size: 18px;
   padding-top: 70px;
@@ -49,3 +56,8 @@
   padding-left: 50px;
   
 }
+ .subscribe-submit-button {
+  height: 56px;
+  background-color: #021b22;
+  border-radius: 5px;
+ }

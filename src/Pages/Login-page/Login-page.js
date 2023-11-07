@@ -3,12 +3,14 @@ import {
   GoogleAuthProvider,
   signInWithPopup,
 } from "firebase/auth";
-import { auth } from "../../firebase/firebase";
-import "./Login-page.css";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import * as yup from "yup";
-import GoogleButton from "react-google-button";
+
+//INTERNAL IMPORT
+import loginPageImage from "../../images/login.jpeg";
+import { auth } from "../../firebase/firebase";
+import "./Login-page.css";
 
 const validateForm = yup.object().shape({
   email: yup.string().email("Please provide a valid email address.").required(),
@@ -88,66 +90,65 @@ function LoginPage() {
 
   return (
     <div>
-      <div className="login-container">
-        <header className="login-header">
-          <h1> Login </h1>
-        </header>
+      <div className="login-page-content">
+        <div className="login-content">
+          <div className="login-container">
+            <header className="login-header">
+              <h1> Login </h1>
+            </header>
 
-        <input
-          type="text"
-          className="login-input"
-          placeholder="Enter your email address"
-          onChange={handleInput}
-          value={formValues.email}
-          name="email"
-        />
-        <input
-          type="password"
-          className="login-input"
-          placeholder="Enter your password"
-          value={formValues.password}
-          onChange={handleInput}
-          name="password"
-        />
+            <input
+              type="text"
+              className="login-input"
+              placeholder="Enter your email address"
+              onChange={handleInput}
+              value={formValues.email}
+              name="email"
+            />
+            <span>{formErrors.email}</span>
+            <input
+              type="password"
+              className="login-input"
+              placeholder="Enter your password"
+              value={formValues.password}
+              onChange={handleInput}
+              name="password"
+            />
+            <span>{formErrors.password}</span>
+            <button
+              type="submit"
+              className="login-button"
+              onClick={handleSignIn}
+            >
+              Sign In
+            </button>
 
-        <div className="forgot-password">
-          <input type="checkbox" />
-          <span> Forgot Password </span>
-        </div>
-
-        <button type="submit" className="login-button" onClick={handleSignIn}>
-          Sign In
-        </button>
-
-        <div>
-          <div className="sign-up-btn">
-            <a id="sign-up-btn" onClick={handleSignUpButton}>
-              Don't have an account? Sign Up
-            </a>
+            <div>
+              <a id="sign-up-btn" onClick={handleSignUpButton}>
+                Don't have an account? Sign Up
+              </a>
+            </div>
           </div>
+          <div className="google-sigin-button">
+            <button
+              type="submit"
+              className="google-sign-in"
+              onClick={handleSignInWithGoogle}
+            >
+              Sign In With Google
+            </button>
+          </div>
+
+          <p>
+            {formErrors.required}
+            <span></span>
+          </p>
+        </div>
+
+        <div className="login-page-image">
+          <img src={loginPageImage} />
         </div>
       </div>
-      <div>
-        
-        <button type="submit" className="google-sign-in" onClick={handleSignInWithGoogle}>
-        Sign In With Google
-        </button>
-  
-      </div>
-      <div>
-        <p>
-          {formErrors.email}
-          <span></span>
-        </p>
-      </div>
-      <p>
-        {formErrors.password}
-        <span></span>
-      </p>
-      <p>
-        {formErrors.required}
-        <span></span>
-      </p>
     </div>
   );
 }

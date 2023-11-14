@@ -4,6 +4,7 @@ import Modal from "react-modal";
 
 //INTERNAL IMPORT
 import { commentCollection } from "../../firebase/firebase";
+import "./Post-page.css";
 
 function EditCommentModal(props) {
   const { openEditModal, selectedComment, closeEditModal } = props;
@@ -47,11 +48,13 @@ function EditCommentModal(props) {
     >
       <div className="post-page-comment-edit-modal-container">
         <input value={inputValue} onChange={handleInput} />
-      </div>
-      <div className="comment-edit-modal-button">
+        <div className="comment-edit-modal-button">
         <button onClick={handleSaveButton}>Save</button>
         <button onClick={handleCancelButton}>Cancel</button>
+        </div>
+        
       </div>
+     
     </Modal>
   );
 }

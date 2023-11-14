@@ -112,9 +112,6 @@ function Header() {
               {isAdmin && (
                 <span onClick={handleAdminPage}>Admin</span>
               )}
-
-
-            
           </div>
         </header>
       </div>

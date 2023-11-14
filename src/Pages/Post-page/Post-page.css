@@ -101,6 +101,7 @@
 .comment-edit-modal-button {
   display: flex;
     justify-content: space-between;
+    gap: 10px;
 }
 
 .comment-bar {

@@ -63,4 +63,13 @@
     flex-direction: column;
     border-radius: 5px;
 }
+.sider-header {
+    padding: 0;
+    background: colorBgContainer,
+}
 
+.admin-page-collapsed {
+    fontSize: '16px';
+    width: 64;
+    height: 64;
+}

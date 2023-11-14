@@ -1,15 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import {
-  deleteDoc,
-  doc,
-  onSnapshot,
-  serverTimestamp,
-} from "firebase/firestore";
+import { deleteDoc, doc, onSnapshot } from "firebase/firestore";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import {FaEdit,} from "react-icons/fa";
-import {MdDelete} from "react-icons/md";
+import { FaEdit } from "react-icons/fa";
+import { MdDelete } from "react-icons/md";
 //INTERNAL IMPORT
 import Header from "../../Components/Header/Header";
 import Footer from "../../Components/Footer/Footer";
@@ -44,8 +39,7 @@ function ServicesPage(props) {
       });
       setLoading(false);
     };
-
-    return () => getData();
+    getData();
   }, []);
 
   const handleCreateNewPostButton = () => {
@@ -101,7 +95,6 @@ function ServicesPage(props) {
             onChange={handleSearch}
           />
         </div>
-
         <div className="service-page-post-container">
           <div className="create-new-post-container">
             <button
@@ -131,13 +124,11 @@ function ServicesPage(props) {
                         alt="blog-image"
                         src={blog.blogImage}
                       />
-
                       <div className="blog-text">{blog.previewText} </div>
                     </div>
                     {blog.userId === user.uid && (
                       <div className="services-page-buttons">
-                        <button 
-                        className="services-page-edit-button"
+                        <button
                           onClick={(e) => {
                             handleOpenEditBlogModal(blog);
                           }}
@@ -145,12 +136,11 @@ function ServicesPage(props) {
                           <FaEdit />
                         </button>
                         <button
-                        className="services-page-delete-button"
                           onClick={(e) => {
                             handleDeleteBlog(blog.blogId);
                           }}
                         >
-                          <MdDelete/>
+                          <MdDelete />
                         </button>
                       </div>
                     )}

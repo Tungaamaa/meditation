@@ -13,8 +13,6 @@
 .service-page-post-container {
   width: 1080px;
   height: 80vh;
-  
-
 }
 
 .create-new-post-container {
@@ -66,6 +64,7 @@
   height: 300px;
   border-radius: 5px;
   background-color: white;
+  box-shadow: 0px 0px 10px gray;
 }
 
 .blog-title {
@@ -114,6 +113,7 @@
 .modal-button {
     display: flex;
     justify-content: space-between;
+    gap: 10px;
 }
 
 .services-page-edit-button {
@@ -129,4 +129,35 @@
 .services-page-buttons {
   display: flex;
   justify-content: center;
+}
+
+@media only screen and (max-width:600px) {
+
+  .search-bar {
+    display: flex;
+    justify-content: center;
+    width: 100px;
+    height: 30px;
+    padding-bottom: 10px;
+  }
+
+  .service-page-content {
+    width: 100vw;
+    height: 100vh;
+    background-color: #f5f7fa;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow:scroll;
+    
+  }
+  
+  .service-page-post-container {
+    width: 100%;
+    min-height: 80vh;
+    
+  
+  }
+
 }

@@ -55,7 +55,7 @@ function PostPage(props) {
       setLoading(false);
     };
 
-    return () => getBlogPageData();
+     getBlogPageData();
   }, [selectedBlogId]);
 
   const handleCommentButton = async () => {
@@ -72,27 +72,8 @@ function PostPage(props) {
         console.log(error);
       });
   };
-console.log(blogData.timeStamp);
-  // const convertDate = (timeStamp) => {
-  //   let date = timeStamp.toDateString();
-  //   let mm = date.getMonth();
-  //   let dd = date.getDate();
-  //   let yyyy = date.getFullYear();
-  
-    
-  //   date = mm + "/" + dd + "/" + yyyy;
-  //   return date
-  // };
-  
-  // {convertDate(blogData.timeStamp)}
 
-  // {new Date(blogData.timeStamp * 1000).toDateString()}
-
-// console.log(formatDate(dateString))
-
-
-
-  
+  // {new Date(blogData.timeStamp * 26.62).toDateString()}
   return (
     <div>
       <Header />
@@ -103,11 +84,7 @@ console.log(blogData.timeStamp);
           <div className="post-page-main">
             <div className="post-page-blog-poster">
               <span>
-                Posted by:{blogData.userName} Posted on:
-            
-                
-                
-              
+                Posted by:{blogData.userName} 
               </span>
               <span></span>
             </div>

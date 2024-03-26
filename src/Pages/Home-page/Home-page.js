@@ -3,7 +3,7 @@ import React from "react";
 //INTERNAL IMPORT
 import "./Home-page.css";
 import Header from "../../Components/Header/Header";
-import homepageMainPicture from "../../images/meditation.avif";
+import homepageMainPicture from "../../images/2.png";
 import Footer from "../../Components/Footer/Footer";
 import aboutUsPicture from "../../images/balance.jpeg";
 import Slick from "../../Components/Sliders/Sliders";
